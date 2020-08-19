@@ -1,0 +1,13 @@
+out=int(input("write the number of sequence"))
+a,b=0,1
+count=0
+if out<=0:
+    print("Write Bigger Number")
+else :
+ while count < out:
+    print(a)
+    c=a+b
+    a=b
+    b=c
+    count +=1
+
