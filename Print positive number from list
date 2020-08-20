@@ -1,0 +1,42 @@
+print("Input Numbers and Check For Positive Numbers")
+print("LIST 1")
+var=int(input("Enter The Number: "))
+time=1
+list=[]
+list.append(var)
+while time>0:
+    var=int(input("Enter The Number: "))
+    list.append(var)
+    c=int(input("Please Select \n1.Add Number To List \n2.Print The List"))
+    if c==1:
+        var=int(input("Enter The Number: "))
+        list.append(var)
+        c=int(input("1.Add Number To List \n2.Print The List"))
+    elif c==2:
+        print("Input: list1 = ",list)
+        break
+print("Output: ")
+for num in list:
+     if num >= 0:
+        print(num, end=" ")
+
+print("\n LIST 2")
+var=int(input(" Enter The Number: "))
+time=1
+list1=[]
+list1.append(var)
+while time>0:
+    var=int(input("Enter The Number: "))
+    list1.append(var)
+    c=int(input("Please Select \n1.Add Number To List \n2.Print The List"))
+    if c==1:
+        var=int(input("Enter The Number: "))
+        list1.append(var)
+        c=int(input("1.Add Number To List \n2.Print The List"))
+    elif c==2:
+        print("Input: list2 = ",list1)
+        break
+print("Output: ")
+for num in list1:
+     if num >= 0:
+        print(num, end=" ")
