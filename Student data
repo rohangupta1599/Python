@@ -1,0 +1,43 @@
+import csv
+
+
+def writecsv(splitval):
+    with open('student.csv', 'a', newline='') as csv_file:
+        writer = csv.writer(csv_file)
+        
+        if csv_file.tell() == 0:
+            writer.writerow(["Name","Age","Phone Number","Email"])
+
+        writer.writerow(splitval)
+    
+if __name__=='__main__':
+    time=True
+
+    num=1
+    
+    while (time):
+        student = input("Enter The Information Of The Student {} In Following Format (Name Age Phone Email) \n ".format(num))
+        
+        studentsplit= student.split(' ')
+        
+
+        print("\n The Value Entered is - \n Name: {}\n Age: {}\n Phone: {}\n Email: {}"
+              .format(studentsplit[0],studentsplit[1],studentsplit[2],studentsplit[3]))
+
+        sure=input("Is The Entered Information Correct [yes/no] ")
+
+        if sure =="yes":
+            writecsv(studentsplit)
+            
+            check=input("Add more student (yes/no): ")
+            if check == "yes":
+                time=True
+                num = num+1
+            elif check == "no":
+                time=False
+            
+        elif sure == "no":
+            print("\n Please Re-enter The Value")
+            
+        
+        
